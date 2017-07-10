@@ -8,5 +8,6 @@ function successCallback(stream) {
 };
 
 function errorCallback(err) {
+  console.error(err);
   alert(err);
 };

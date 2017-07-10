@@ -1,11 +1,14 @@
-const medias = {audio : false, video : {
-        facingMode : {
-          exact : "environment"
-        }
-      }},
-      video  = document.getElementById("video"),
-      canvas = document.getElementById("canvas"),
-      ctx    = canvas.getContext("2d");
+const medias = {
+  audio : false,
+  video : {
+    facingMode : {
+      exact : "environment"
+    }
+  }
+},
+video  = document.getElementById("video"),
+canvas = document.getElementById("canvas"),
+ctx    = canvas.getContext("2d");
 
 let imgData, data, ave;
 
@@ -18,6 +21,7 @@ function successCallback(stream) {
 };
 
 function errorCallback(err) {
+  console.error(err);
   alert(err);
 };
 
@@ -32,8 +36,8 @@ function draw() {
     for (let i = 0; i < data.length; i += 4) {
       ave = (data[i + 0] + data[i + 1] + data[i + 2]) / 3;
 
-      data[i + 0] = 
-      data[i + 1] = 
+      data[i + 0] =
+      data[i + 1] =
       data[i + 2] = (ave > 255 / 2) ? 255 : (ave > 255 / 4) ? 127 : 0;
       data[i + 3] = 255;
     }

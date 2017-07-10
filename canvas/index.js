@@ -1,11 +1,14 @@
-const medias = {audio : false, video : {
-        facingMode : {
-          exact : "environment"
-        }
-      }},
-      video  = document.getElementById("video"),
-      canvas = document.getElementById("canvas"),
-      ctx    = canvas.getContext("2d");
+const medias = {
+  audio : false,
+  video : {
+    facingMode : {
+      exact : "environment"
+    }
+  }
+},
+video  = document.getElementById("video"),
+canvas = document.getElementById("canvas"),
+ctx    = canvas.getContext("2d");
 
 navigator.getUserMedia(medias, successCallback, errorCallback);
 
@@ -16,6 +19,7 @@ function successCallback(stream) {
 };
 
 function errorCallback(err) {
+  console.error(err);
   alert(err);
 };
 
