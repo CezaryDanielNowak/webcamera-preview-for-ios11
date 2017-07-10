@@ -1,0 +1,24 @@
+{
+  "name": "webcamera-preview-for-ios11",
+  "version": "1.0.0",
+  "description": "Websites can access camera and microphone streams from a user's device (user permission is required.)",
+  "main": "serve.js",
+  "dependencies": {
+    "node-static": "0.7.9",
+    "selfsigned": "1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node serve.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CezaryDanielNowak/webcamera-preview-for-ios11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CezaryDanielNowak/webcamera-preview-for-ios11/issues"
+  },
+  "homepage": "https://github.com/CezaryDanielNowak/webcamera-preview-for-ios11#readme"
+}
